@@ -1,1 +1,8 @@
 [[ -s ~/.bashrc ]] && source ~/.bashrc
+
+# Setting PATH for Python 3.4
+export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+# Setting PATH for Maven 3.2.2
+export PATH="/Users/seiji/java-workspace/apache-maven-3.2.2/bin:${PATH}"
+export JAVA_HOME=`/usr/libexec/java_home`
+export PATH="${JAVA_HOME}/bin:${PATH}"
