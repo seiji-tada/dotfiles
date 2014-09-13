@@ -1,5 +1,6 @@
 #! /bin/bash
-ln -s ~/dotfiles/_vimrc ~/.vimrc
-ln -s ~/dotfiles/_gvimrc ~/.gvimrc
-ln -s ~/dotfiles/_bashrc ~/.bashrc
-ln -s ~/dotfiles/_bash_profile ~/.bash_profile
+ln -sf ~/dotfiles/_vimrc ~/.vimrc
+ln -sf ~/dotfiles/_gvimrc ~/.gvimrc
+ln -sf ~/dotfiles/colors ~/.vim/colors
+ln -sf ~/dotfiles/_bashrc ~/.bashrc
+ln -sf ~/dotfiles/_bash_profile ~/.bash_profile
