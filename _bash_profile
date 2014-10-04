@@ -1,8 +1,15 @@
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
+# Setting PATH for Git (to override Apple bundled /usr/bin/git 1.8.5.2)
+export PATH="/usr/local/git/bin:${PATH}"
 # Setting PATH for Python 3.4
 export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-# Setting PATH for Maven 3.2.2
-export PATH="/Users/seiji/java-workspace/apache-maven-3.2.2/bin:${PATH}"
+# Setting JAVA_HOME to the latest installed
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH="${JAVA_HOME}/bin:${PATH}"
+# Setting PATH for Maven 3.2.3
+export M3_HOME="${HOME}/bin/apache-maven-3.2.3"
+export M3="${M3_HOME}/bin"
+export PATH="${M3}:${PATH}"
+# Setting PATH for Standard ML (SML/NJ)
+export PATH="$PATH:/usr/local/smlnj/bin"
