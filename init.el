@@ -6,10 +6,6 @@
 (package-initialize)
 
 (prefer-coding-system 'utf-8)
-;;(set-default-coding-systems 'utf-8)
-;;(set-buffer-file-coding-system 'utf-8)
-;;(set-terminal-coding-system 'utf-8)
-;;(set-keyboard-coding-system 'utf-8)
 (set-language-environment "Japanese")
 
 (setq make-backup-files nil)
@@ -30,9 +26,25 @@
   (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
   (global-set-key (kbd "C-x C-j") 'skk-mode)
   (setq default-input-method "japanese-skk")
-  (setq skk-user-directory "~/emacs/SKK")
-  (setq skk-init-file "~/emacs/SKK/init")
+  (setq skk-user-directory "~/.emacs.d/share/skk")
+  (setq skk-init-file "~/.emacs.d/share/skk/init")
   (require 'skk-study))
 
-(setenv "PATH" (concat "/usr/local/smlnj/bin:" (getenv "PATH")))
-(setq exec-path (cons "/usr/local/smlnj/bin"  exec-path))
+(exec-path-from-shell-initialize)
+
+(require 'auto-complete-config)
+(ac-config-default)
+
+(require 'py-autopep8)
+(add-hook 'python-mode-hook
+	  '(lambda ()
+	     (setq indent-tabs-mode nil)
+	     (setq indent-level 4)
+	     (setq python-indent 4)
+	     (setq tab-width 4)
+	     (py-autopep8-enable-on-save)
+;;	     (auto-complete-mode -1)
+	     ))
+
+;;(elpy-enable)
+
