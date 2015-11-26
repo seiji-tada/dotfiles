@@ -12,5 +12,9 @@ export PATH="${JAVA_HOME}/bin:${PATH}"
 export M3_HOME="${HOME}/bin/apache-maven-3.2.3"
 export M3="${M3_HOME}/bin"
 export PATH="${M3}:${PATH}"
-# Setting PATH for Standard ML (SML/NJ)
-export PATH="$PATH:/usr/local/smlnj/bin"
+
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "${pyenv init -}"
+fi
