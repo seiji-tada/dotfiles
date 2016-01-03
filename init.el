@@ -1,4 +1,5 @@
 (keyboard-translate ?\C-h ?\C-?)
+(setq dired-use-ls-dired nil)
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)

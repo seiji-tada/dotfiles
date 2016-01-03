@@ -2,9 +2,6 @@
 
 # Setting PATH for Git (to override Apple bundled /usr/bin/git 1.8.5.2)
 export PATH="/usr/local/git/bin:${PATH}"
-# Setting PATH for Python 3.4
-export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH="${HOME}/Library/Python/3.4/bin:${PATH}"
 # Setting JAVA_HOME to the latest installed
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH="${JAVA_HOME}/bin:${PATH}"
