@@ -36,7 +36,6 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-(require 'py-autopep8)
 (add-hook 'python-mode-hook
 	  '(lambda ()
 	     (setq indent-tabs-mode nil)
@@ -44,8 +43,4 @@
 	     (setq python-indent 4)
 	     (setq tab-width 4)
 	     (py-autopep8-enable-on-save)
-;;	     (auto-complete-mode -1)
-	     ))
-
-;;(elpy-enable)
-
+           ))
