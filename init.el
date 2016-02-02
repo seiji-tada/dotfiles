@@ -42,5 +42,7 @@
 	     (setq indent-level 4)
 	     (setq python-indent 4)
 	     (setq tab-width 4)
-	     (py-autopep8-enable-on-save)
-           ))
+	     ))
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
